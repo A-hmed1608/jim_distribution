@@ -3,50 +3,41 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+  const { title, image, paragraph, author, tags, publishDate, slug } = blog;
+  const postUrl = slug ? `/blog/${slug}` : "/blog-details";
+  const displayTag = tags && tags.length > 0 ? tags[0] : "Actualités";
+  const displayImage = image || "/images/blog/blog-01.jpg";
+
   return (
     <>
-      <div className="group shadow-one hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-white duration-300">
+      <div className="group border border-[#141d23]/15 dark:border-white/15 bg-white dark:bg-[#1a1c1e] transition-all duration-200 hover:border-[#0059bb]">
         <Link
-          href="/blog-details"
-          className="relative block aspect-37/22 w-full"
+          href={postUrl}
+          className="relative block aspect-37/22 w-full overflow-hidden border-b border-[#141d23]/10 dark:border-white/10"
         >
-          <span className="bg-primary absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white capitalize">
-            {tags[0]}
+          <span className="absolute top-4 right-4 z-20 inline-flex items-center justify-center font-mono text-[10px] font-bold text-white bg-[#0059bb] px-3 py-1 uppercase border border-[#0059bb]">
+            [ {displayTag} ]
           </span>
-          <Image src={image} alt="image" fill />
+          <Image src={displayImage} alt={title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
         </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+        <div className="p-6">
           <h3>
             <Link
-              href="/blog-details"
-              className="hover:text-primary dark:hover:text-primary mb-4 block text-xl font-bold text-black sm:text-2xl dark:text-white"
+              href={postUrl}
+              className="mb-3 block font-display text-lg font-bold text-[#141d23] dark:text-white hover:text-[#0059bb] dark:hover:text-[#0059bb] transition-colors uppercase tracking-tight"
             >
               {title}
             </Link>
           </h3>
-          <p className="border-body-color/10 text-body-color mb-6 border-b pb-6 text-base font-medium dark:border-white/10">
+          <p className="font-sans text-xs text-[#414754] dark:text-white/70 mb-6 border-b border-[#141d23]/10 dark:border-white/10 pb-4 leading-relaxed line-clamp-3">
             {paragraph}
           </p>
-          <div className="flex items-center">
-            <div className="border-body-color/10 mr-5 flex items-center border-r pr-5 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5 dark:border-white/10">
-              <div className="mr-4">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                  <Image src={author.image} alt="author" fill />
-                </div>
-              </div>
-              <div className="w-full">
-                <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                  By {author.name}
-                </h4>
-                <p className="text-body-color text-xs">{author.designation}</p>
-              </div>
+          <div className="flex items-center justify-between font-mono text-xs text-[#414754] dark:text-white/60">
+            <div>
+              <span className="text-[#0059bb] dark:text-[#adc7ff] font-bold">{author?.name || "JIM DISTRIBUTION"}</span>
             </div>
-            <div className="inline-block">
-              <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                Date
-              </h4>
-              <p className="text-body-color text-xs">{publishDate}</p>
+            <div>
+              <span>{publishDate}</span>
             </div>
           </div>
         </div>

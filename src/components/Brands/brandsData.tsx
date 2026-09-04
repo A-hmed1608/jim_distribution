@@ -1,47 +1,69 @@
-import { Brand } from "@/types/brand";
+export interface RealBrand {
+  id: number;
+  name: string;
+  image: string;
+}
 
-const brandsData: Brand[] = [
-  {
-    id: 6,
-    name: "Formbold",
-    href: "https://formbold.com",
-    image: "/images/brands/formbold.svg",
-    imageLight: "/images/brands/formbold-light.svg",
-  },
+const brandsData: RealBrand[] = [
   {
     id: 1,
-    name: "UIdeck",
-    href: "https://uideck.com",
-    image: "/images/brands/uideck.svg",
-    imageLight: "/images/brands/uideck-light.svg",
+    name: "Gullón",
+    image: "/images/brands/real/gullon-removebg-preview.png",
   },
   {
     id: 2,
-    name: "Tailgrids",
-    href: "https://tailgrids.com",
-    image: "/images/brands/tailgrids.svg",
-    imageLight: "/images/brands/tailgrids-light.svg",
+    name: "Don Simón",
+    image: "/images/brands/real/Logo_de_Don_Simón.gif",
   },
   {
     id: 3,
-    name: "Lineicons",
-    href: "https://lineicons.com",
-    image: "/images/brands/lineicons.svg",
-    imageLight: "/images/brands/lineicons-light.svg",
+    name: "Puleva",
+    image: "/images/brands/real/puleva-removebg-preview.png",
   },
   {
     id: 4,
-    name: "Tailadmin",
-    href: "https://tailadmin.com",
-    image: "/images/brands/tailadmin.svg",
-    imageLight: "/images/brands/tailadmin-light.svg",
+    name: "Grupo Calvo",
+    image: "/images/brands/real/Grupo_Calvo-Logo.wine.svg",
   },
   {
     id: 5,
-    name: "PlainAdmin",
-    href: "https://plainadmin.com",
-    image: "/images/brands/plainadmin.svg",
-    imageLight: "/images/brands/plainadmin-light.svg",
+    name: "Pastas Gallo",
+    image: "/images/brands/real/gallo-logo-s-removebg-preview.png",
+  },
+  {
+    id: 6,
+    name: "Royal",
+    image: "/images/brands/real/royal-2-logo-svg-vector.svg",
+  },
+  {
+    id: 7,
+    name: "Piacelli",
+    image: "/images/brands/real/Piacelli-removebg-preview.png",
+  },
+  {
+    id: 8,
+    name: "Pato Real",
+    image: "/images/brands/real/Pato-Real-removebg-preview.png",
+  },
+  {
+    id: 9,
+    name: "AYALA",
+    image: "/images/brands/real/AYALA-removebg-preview.png",
+  },
+  {
+    id: 10,
+    name: "Eliges",
+    image: "/images/brands/real/eliges-removebg-preview.png",
+  },
+  {
+    id: 11,
+    name: "Lagarto",
+    image: "/images/brands/real/lagarto-png-42.webp",
+  },
+  {
+    id: 12,
+    name: "Swiss Distribution",
+    image: "/images/brands/real/swiss_distribution_ma_logo-removebg-preview.png",
   },
 ];
 

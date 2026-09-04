@@ -6,16 +6,16 @@ const Blog = () => {
   return (
     <section
       id="blog"
-      className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
+      className="bg-[#f6faff] dark:bg-[#141d23] py-16 md:py-20 lg:py-24 border-b border-[#141d23]/10 dark:border-white/10"
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="ACTUALITÉS & PERSPECTIVES DU SECTEUR"
+          paragraph="Analyses, actualités et réflexions sur les tendances de la distribution agroalimentaire et des produits FMCG."
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogData.map((blog) => (
             <div key={blog.id} className="w-full">
               <SingleBlog blog={blog} />

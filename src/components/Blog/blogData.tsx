@@ -3,45 +3,45 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Enjeux de la distribution agroalimentaire et gestion des flux FMCG",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Analyse des tendances et bonnes pratiques dans la distribution de produits de grande consommation.",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
+      name: "Équipe Rédaction",
       image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      designation: "Analyste FMCG",
     },
-    tags: ["creative"],
-    publishDate: "2025",
+    tags: ["LOGISTIQUE FMCG"],
+    publishDate: "2026",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Optimisation de l'approvisionnement B2B en réseau Retail",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Comment structurer l'approvisionnement des grandes enseignes pour garantir la disponibilité constante en rayon.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
+      name: "Département Commercial",
       image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      designation: "Responsable Distribution",
     },
-    tags: ["computer"],
-    publishDate: "2025",
+    tags: ["AGROALIMENTAIRE"],
+    publishDate: "2026",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Partenariats de distribution et représentation de marques",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Les facteurs clés de succès pour le déploiement commercial et la représentation des marques de grande consommation.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
+      name: "Direction Stratégie",
       image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      designation: "Expert Logistique",
     },
-    tags: ["design"],
-    publishDate: "2025",
+    tags: ["DISTRIBUTION B2B"],
+    publishDate: "2026",
   },
 ];
 export default blogData;

@@ -1,41 +1,44 @@
-import { Brand } from "@/types/brand";
+import { Marquee } from "@/components/magicui/marquee";
 import Image from "next/image";
 import brandsData from "./brandsData";
 
 const Brands = () => {
   return (
-    <section className="pt-16">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-xs bg-gray-light px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
-            </div>
-          </div>
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#f6faff] py-16 dark:bg-[#141d23] md:py-28">
+      <div className="flex flex-col items-center justify-center px-6">
+        <p className="text-center font-medium text-[#141d23]/80 dark:text-white/80 text-xl tracking-[-0.01em]">
+          Plus de 2,2 millions d&apos;entreprises dans le monde nous font déjà confiance
+        </p>
+
+        <div className="mt-10 flex max-w-5xl items-center justify-center">
+          <Marquee
+            pauseOnHover
+            className="mask-x-from-75% [--duration:20s]"
+          >
+            {brandsData.map((brand) => (
+              <div
+                key={brand.id}
+                className="flex h-16 items-center justify-center px-6"
+              >
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  width={140}
+                  height={60}
+                  className="h-16 w-auto object-contain"
+                  unoptimized={brand.image.endsWith(".gif")}
+                />
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
+
+      {/* Gradient fades on left and right edges */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-[#f6faff] to-transparent dark:from-[#141d23]"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-[#f6faff] to-transparent dark:from-[#141d23]"></div>
     </section>
   );
 };
 
 export default Brands;
-
-const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { href, image, imageLight, name } = brand;
-
-  return (
-    <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-      <a
-        href={href}
-        target="_blank"
-        rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
-      >
-        <Image src={imageLight} alt={name} fill className="hidden dark:block" />
-        <Image src={image} alt={name} fill className="block dark:hidden" />
-      </a>
-    </div>
-  );
-};

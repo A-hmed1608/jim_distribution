@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
-layer(base);
-
 @import 'tailwindcss';
+@plugin "daisyui";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -17,46 +15,83 @@ layer(base);
   --color-current: currentColor;
   --color-transparent: transparent;
   --color-white: #ffffff;
-  --color-black: #121723;
-  --color-dark: #1d2430;
-  --color-primary: #4a6cf7;
+  --color-black: #141d23;
+  --color-dark: #141d23;
+  --color-primary: #0059bb;
+  --color-primary-container: #0070ea;
+  --color-surface: #f6faff;
+  --color-surface-dim: #d2dbe4;
+  --color-surface-container: #e6eff8;
+  --color-on-surface: #141d23;
   --color-yellow: #fbb040;
-  --color-bg-color-dark: #171c28;
+  --color-bg-color-dark: #141d23;
 
-  --color-body-color: #788293;
+  --color-body-color: #414754;
   --color-body-color-dark: #959cb1;
 
-  --color-stroke-stroke: #e3e8ef;
+  --color-stroke-stroke: #c1c6d7;
   --color-stroke-dark: #353943;
 
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-gray-950: #030712;
-  --color-gray-dark: #1e232e;
-  --color-gray-light: #f0f2f9;
+  --color-gray-50: #f6faff;
+  --color-gray-100: #ecf5fe;
+  --color-gray-200: #e6eff8;
+  --color-gray-300: #c1c6d7;
+  --color-gray-400: #717786;
+  --color-gray-500: #5d5e61;
+  --color-gray-600: #414754;
+  --color-gray-700: #293138;
+  --color-gray-800: #141d23;
+  --color-gray-900: #141d23;
+  --color-gray-950: #0a0e12;
+  --color-gray-dark: #1a1c1e;
+  --color-gray-light: #f6faff;
 
-  --shadow-sign-up: 0px 5px 10px rgba(4, 10, 34, 0.2);
-  --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
-  --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
-  --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
-  --shadow-sticky: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
-  --shadow-feature-2: 0px 10px 40px rgba(48, 86, 211, 0.12);
-  --shadow-submit: 0px 5px 20px rgba(4, 10, 34, 0.1);
-  --shadow-submit-dark: 0px 5px 20px rgba(4, 10, 34, 0.1);
-  --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
-  --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  --shadow-btn-light: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  --color-foreground: #141d23;
+  --color-foreground-dark: #ffffff;
 
-  --drop-shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
+  --shadow-sign-up: none;
+  --shadow-one: none;
+  --shadow-two: none;
+  --shadow-three: none;
+  --shadow-sticky: inset 0 -1px 0 0 rgba(20, 29, 35, 0.15);
+  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.15);
+  --shadow-feature-2: none;
+  --shadow-submit: none;
+  --shadow-submit-dark: none;
+  --shadow-btn: none;
+  --shadow-btn-hover: none;
+  --shadow-btn-light: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+.mask-x-from-75\% {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 @utility container {
