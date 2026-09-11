@@ -51,7 +51,7 @@ export const LogoCloud = () => {
         )}
       />
 
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="w-full text-center mb-8">
           <h2 className="mb-2">
             <span className="block font-sans font-medium text-xs sm:text-sm uppercase tracking-widest text-[#0059bb] dark:text-[#adc7ff] mb-2">

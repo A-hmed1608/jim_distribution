@@ -20,12 +20,12 @@ export function LogoCloud({ logos, className, ...props }: LogoCloudProps) {
   return (
     <div
       className={cn(
-        "relative mx-auto max-w-4xl bg-gradient-to-r from-secondary/40 via-transparent to-secondary/40 py-6 md:border-x border-[#141d23]/10 dark:border-white/10 rounded-2xl overflow-hidden",
+        "relative mx-auto w-full max-w-6xl xl:max-w-7xl bg-gradient-to-r from-[#0059bb]/10 via-transparent to-[#0059bb]/10 dark:from-[#0059bb]/20 dark:via-transparent dark:to-[#0059bb]/20 py-8 md:border-x border-[#0059bb]/20 dark:border-[#0059bb]/30 rounded-2xl overflow-hidden shadow-sm shadow-[#0059bb]/5",
         className
       )}
       {...props}
     >
-      <div className="-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t border-[#141d23]/10 dark:border-white/10" />
+      <div className="-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t border-[#0059bb]/20 dark:border-[#0059bb]/30" />
 
       <InfiniteSlider gap={42} reverse speed={45} speedOnHover={15}>
         {logos.map((logo) => (
@@ -56,7 +56,7 @@ export function LogoCloud({ logos, className, ...props }: LogoCloudProps) {
         direction="right"
       />
 
-      <div className="-translate-x-1/2 -bottom-px pointer-events-none absolute left-1/2 w-screen border-b border-[#141d23]/10 dark:border-white/10" />
+      <div className="-translate-x-1/2 -bottom-px pointer-events-none absolute left-1/2 w-screen border-b border-[#0059bb]/20 dark:border-[#0059bb]/30" />
     </div>
   );
 }
