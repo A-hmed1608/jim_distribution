@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -65,33 +65,10 @@ const Blog: React.FC<BlogProps> = ({
 }) => {
   const allPosts = posts && posts.length > 0 ? posts : defaultBlogPosts;
 
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-
-  // Extract unique categories
-  const categories = useMemo(() => {
-    const cats = new Set<string>();
-    allPosts.forEach((post) => {
-      post.tags?.forEach((t) => cats.add(t));
-    });
-    return ["all", ...Array.from(cats)];
-  }, [allPosts]);
-
-  // Filter posts by category
-  const filteredPosts = useMemo(() => {
-    if (selectedCategory === "all") {
-      return allPosts;
-    }
-    return allPosts.filter((p) =>
-      p.tags?.some(
-        (t) => t.toLowerCase() === selectedCategory.toLowerCase()
-      )
-    );
-  }, [allPosts, selectedCategory]);
-
   return (
     <div className="w-full">
-      {/* Filter and Sorting Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-border/50 dark:border-white/10 mb-10">
+      {/* Header */}
+      <div className="pb-8 border-b border-border/50 dark:border-white/10 mb-10">
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground dark:text-white">
             {title}
@@ -102,31 +79,11 @@ const Blog: React.FC<BlogProps> = ({
             </p>
           )}
         </div>
-
-        <div className="flex flex-wrap items-center gap-3">
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1.5 bg-muted/60 dark:bg-white/5 rounded-xl border border-border/40">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all cursor-pointer ${
-                  selectedCategory === cat
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground hover:bg-background/80"
-                }`}
-              >
-                {cat === "all" ? "Tous" : cat}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Blog Cards Grid - 2 columns on mobile, 3 on desktop */}
       <div className="grid grid-cols-2 gap-3.5 sm:gap-6 lg:gap-8 lg:grid-cols-3">
-        {filteredPosts.map((post) => {
+        {allPosts.map((post) => {
           const postSlug = post.slug || post.id;
           const mainTag = post.tags?.[0] || "Actualité";
 
@@ -207,9 +164,9 @@ const Blog: React.FC<BlogProps> = ({
         })}
       </div>
 
-      {filteredPosts.length === 0 && (
+      {allPosts.length === 0 && (
         <div className="text-center py-16 bg-muted/20 rounded-2xl border border-dashed border-border/60">
-          <p className="text-muted-foreground">Aucun article trouvé dans cette catégorie.</p>
+          <p className="text-muted-foreground">Aucun article trouvé.</p>
         </div>
       )}
     </div>
