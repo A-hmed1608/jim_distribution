@@ -90,14 +90,17 @@ const Footer = () => {
                   CONTACT B2B
                 </h2>
                 <ul className="space-y-2 font-mono text-xs text-[#414754] dark:text-white/70">
-                  <li>Zone: <span className="text-[#0059bb] dark:text-[#adc7ff]">[ZONES À CONFIRMER]</span></li>
-                  <li>Tél: <span className="text-[#0059bb] dark:text-[#adc7ff]">[À COMPLÉTER]</span></li>
-                  <li>Email: <span className="text-[#0059bb] dark:text-[#adc7ff]">[À COMPLÉTER]</span></li>
+                  <li>Zone: <span className="text-[#0059bb] dark:text-[#adc7ff]">Nord du Maroc</span></li>
+                  <li>Tél: <a href="tel:+212610084653" className="text-[#0059bb] dark:text-[#adc7ff] hover:underline">+212 6 10 08 46 53</a></li>
+                  <li>Email: <a href="mailto:jimdistribution@gmail.com" className="text-[#0059bb] dark:text-[#adc7ff] hover:underline">jimdistribution@gmail.com</a></li>
+                  <li className="pt-1 text-[11px] leading-tight text-[#414754]/80 dark:text-white/60">
+                    Rue Bni Guemel Aug.Pui Local 27 Lot Aghrasse 93150
+                  </li>
                 </ul>
                 <div className="mt-4">
                   <Link
                     href="/contact"
-                    className="inline-block bg-[#0059bb] hover:bg-[#0070ea] px-4 py-2 font-mono text-[11px] font-bold text-white uppercase border border-[#0059bb]"
+                    className="inline-block bg-[#0059bb] hover:bg-[#0070ea] px-4 py-2 font-mono text-[11px] font-bold text-white uppercase border border-[#0059bb] rounded-md transition-colors"
                   >
                     DEMANDER UN DEVIS
                   </Link>
@@ -109,7 +112,7 @@ const Footer = () => {
           <div className="h-px w-full bg-[#141d23]/10 dark:bg-white/10"></div>
           <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#414754] dark:text-white/60">
             <p>© {new Date().getFullYear()} JIM DISTRIBUTION. Tous droits réservés.</p>
-            <p>[ CORPORATE B2B FOOD DISTRIBUTION ]</p>
+            <p>[ DISTRIBUTION AGROALIMENTAIRE B2B - NORD DU MAROC ]</p>
           </div>
         </div>
       </footer>

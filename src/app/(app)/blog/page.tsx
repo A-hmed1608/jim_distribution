@@ -1,6 +1,5 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
+import BlogGrid from "@/components/blog";
 import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getPayloadClient } from "@/lib/payload";
 import { Blog as BlogType } from "@/types/blog";
 import { Metadata } from "next";
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
     "Suivez les actualités, analyses et tendances du marché FMCG et de la distribution agroalimentaire au Maroc par JIM DISTRIBUTION.",
 };
 
-const Blog = async () => {
+const BlogPage = async () => {
   let posts: BlogType[] = [];
 
   try {
@@ -83,28 +82,12 @@ const Blog = async () => {
   const displayPosts = posts.length > 0 ? posts : blogData;
 
   return (
-    <>
-      <Breadcrumb
-        pageName="Actualités & Perspectives"
-        description="Analyses, actualités et réflexions sur les tendances de la distribution agroalimentaire et des produits FMCG au Maroc."
-      />
-
-      <section className="pt-[120px] pb-[120px]">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {displayPosts.map((blog) => (
-              <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3 mb-8"
-              >
-                <SingleBlog blog={blog} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+    <div className="pt-28 pb-24 md:pt-36 bg-background">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <BlogGrid posts={displayPosts} />
+      </div>
+    </div>
   );
 };
 
-export default Blog;
+export default BlogPage;

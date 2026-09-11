@@ -23,20 +23,20 @@ export default function CallToAction() {
             {/* Left side - Text content */}
             <div className="flex-1 max-w-xl">
               <p className="font-mono text-xs font-semibold uppercase tracking-widest text-[#0059bb] dark:text-[#adc7ff] mb-4">
-                Ready to get started?
+                Prêt à collaborer avec nous ?
               </p>
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#141d23] dark:text-white mb-6">
-                Call to Action
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#141d23] dark:text-white mb-6 uppercase">
+                Développez Vos Ventes
               </h2>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[#414754]/80 dark:text-white/60 mb-8 max-w-lg">
-                Get access to our collection of pre-built blocks and components today.
+                Faites confiance à un partenaire expert pour étendre la portée de vos marques à travers tout le Royaume.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Button size="lg" className="rounded-lg bg-[#141d23] dark:bg-white text-white dark:text-[#141d23] hover:bg-[#141d23]/90 dark:hover:bg-white/90 font-mono text-sm font-semibold tracking-wider uppercase px-6 py-3">
-                  Get Access
+                <Button size="lg" className="rounded-lg bg-[#0059bb] dark:bg-white text-white dark:text-[#141d23] hover:bg-[#004494] dark:hover:bg-white/90 font-sans text-sm font-semibold tracking-wider uppercase px-6 py-3">
+                  Devenir Partenaire
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-lg border-[#141d23]/20 dark:border-white/20 bg-white dark:bg-transparent text-[#141d23] dark:text-white hover:bg-[#f6faff] dark:hover:bg-white/5 font-mono text-sm font-semibold tracking-wider uppercase px-6 py-3">
-                  Schedule a Demo
+                <Button variant="outline" size="lg" className="rounded-lg border-[#141d23]/20 dark:border-white/20 bg-white dark:bg-transparent text-[#141d23] dark:text-white hover:bg-[#f6faff] dark:hover:bg-white/5 font-sans text-sm font-semibold tracking-wider uppercase px-6 py-3">
+                  Contactez-Nous
                 </Button>
               </div>
             </div>

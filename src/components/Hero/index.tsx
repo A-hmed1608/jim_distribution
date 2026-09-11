@@ -22,7 +22,7 @@ const Hero = () => {
             <p className="mb-10 font-sans text-base leading-relaxed text-white/80 sm:text-lg md:text-xl max-w-[820px] mx-auto">
               JIM DISTRIBUTION est votre partenaire stratégique pour la
               distribution et la représentation commerciale de marques
-              agroalimentaires et FMCG. Rigueur opérationnelle, gestion
+              agroalimentaires et FMCG dans le <strong className="text-white font-semibold">Nord du Maroc</strong>. Rigueur opérationnelle, gestion
               structurée des flux et engagement qualité.
             </p>
 
@@ -62,10 +62,10 @@ const Hero = () => {
                   [ RÉSEAU CLIENTS ]
                 </div>
                 <div className="font-display text-xl font-bold text-white">
-                  [CHIFFRE À CONFIRMER]
+                  GMS &amp; Proximité
                 </div>
                 <div className="font-sans text-xs text-white/60">
-                  Points de vente &amp; partenaires
+                  Points de vente &amp; grossistes
                 </div>
               </div>
 
@@ -74,10 +74,10 @@ const Hero = () => {
                   [ INFRASTRUCTURE ]
                 </div>
                 <div className="font-display text-xl font-bold text-white">
-                  [CAPACITÉ À CONFIRMER]
+                  Plateforme Moderne
                 </div>
                 <div className="font-sans text-xs text-white/60">
-                  Capacité de stockage &amp; logistique
+                  Stockage &amp; Chaîne du froid
                 </div>
               </div>
 
@@ -86,10 +86,10 @@ const Hero = () => {
                   [ COUVERTURE ]
                 </div>
                 <div className="font-display text-xl font-bold text-white">
-                  [ZONES À CONFIRMER]
+                  Nord du Maroc
                 </div>
                 <div className="font-sans text-xs text-white/60">
-                  Territoires de distribution
+                  Tanger, Tétouan &amp; Région
                 </div>
               </div>
             </div>

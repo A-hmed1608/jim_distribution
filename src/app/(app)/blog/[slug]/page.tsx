@@ -106,8 +106,74 @@ const BlogPostPage = async ({ params }: Props) => {
       })
     : "Récemment";
 
+  const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jimdistribution.ma";
+  const postUrl = `${BASE_URL}/blog/${slug}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt || post.metaDescription || post.title,
+    "image": imageUrl.startsWith("http") ? imageUrl : `${BASE_URL}${imageUrl}`,
+    "datePublished": post.publishedAt || "2026-09-11",
+    "dateModified": post.updatedAt || post.publishedAt || "2026-09-11",
+    "author": {
+      "@type": "Organization",
+      "name": post.authorName || "JIM DISTRIBUTION",
+      "url": BASE_URL,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "JIM DISTRIBUTION",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${BASE_URL}/images/logo/logo.svg`,
+      },
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    "inLanguage": "fr-FR",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": BASE_URL,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": `${BASE_URL}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": postUrl,
+      },
+    ],
+  };
+
   return (
     <>
+      {/* Schema.org BlogPosting & BreadcrumbList for Google Rich Snippets & AI Citations */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <Breadcrumb
         pageName={post.title}
         description={post.excerpt || "Actualités et perspectives de JIM DISTRIBUTION."}

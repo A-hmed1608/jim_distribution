@@ -1,5 +1,6 @@
 import { postgresAdapter } from '@payloadcms/db-postgres';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
+import { TextColorFeature, HighlightColorFeature } from 'payloadcms-lexical-ext';
 import path from 'path';
 import { buildConfig } from 'payload';
 import { fileURLToPath } from 'url';
@@ -21,7 +22,13 @@ export default buildConfig({
     },
   },
   collections: [Users, Posts, Categories, Media],
-  editor: lexicalEditor(),
+  editor: lexicalEditor({
+    features: ({ defaultFeatures }) => [
+      ...defaultFeatures,
+      TextColorFeature(),
+      HighlightColorFeature(),
+    ],
+  }),
   secret: process.env.PAYLOAD_SECRET || 'c87f95d826a455a73e4b7b370123ef98d021c38e91d84f23b7e',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

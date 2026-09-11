@@ -107,7 +107,7 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-sm font-medium tracking-wide uppercase font-mono lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-[#0059bb] dark:text-[#adc7ff]"
+                                ? "text-[#0059bb] dark:text-[#0059bb]"
                                 : "text-[#141d23] hover:text-[#0059bb] dark:text-white/80 dark:hover:text-white"
                             }`}
                           >
@@ -154,12 +154,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end gap-3 pr-16 lg:pr-0">
-                <Link
-                  href="/contact"
-                  className="text-[#141d23] dark:text-white hidden px-4 py-2.5 text-xs font-mono font-medium tracking-wider uppercase border border-[#141d23]/30 dark:border-white/30 hover:bg-[#141d23] hover:text-white dark:hover:bg-white dark:hover:text-[#141d23] transition-colors md:block"
-                >
-                  NOUS CONTACTER
-                </Link>
+
                 <Link
                   href="/contact"
                   className="bg-[#0059bb] hover:bg-[#0070ea] hidden px-5 py-2.5 text-xs font-mono font-bold tracking-wider text-white uppercase transition-colors md:block border border-[#0059bb]"

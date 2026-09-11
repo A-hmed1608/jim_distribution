@@ -2,14 +2,16 @@ import CTA from "@/components/cta";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import LogoCloud from "@/components/logo-cloud";
+import LocalGeoFAQ from "@/components/FAQ/LocalGeoFAQ";
+import TestimonialsColumnsSection from "@/components/Testimonials/TestimonialsColumnsSection";
 import TrustedBy from "@/components/TrustedBy";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JIM DISTRIBUTION | Distribution Agroalimentaire & FMCG au Maroc",
+  title: "JIM DISTRIBUTION | Distribution Agroalimentaire & FMCG - Nord du Maroc",
   description:
-    "JIM DISTRIBUTION est votre partenaire de référence pour la distribution et la représentation commerciale des marques agroalimentaires et FMCG au Maroc.",
+    "JIM DISTRIBUTION est votre partenaire de référence pour la distribution et la représentation commerciale des marques agroalimentaires et FMCG dans le Nord du Maroc (Tanger, Tétouan, Martil & région).",
 };
 
 export default function Home() {
@@ -30,6 +32,12 @@ export default function Home() {
 
       {/* 5. Trusted by companies (Logo Grid) */}
       <TrustedBy />
+
+      {/* 6. Animated Infinite Testimonials Columns */}
+      <TestimonialsColumnsSection />
+
+      {/* 7. Local & GEO FAQ Section */}
+      <LocalGeoFAQ />
     </>
   );
 }
