@@ -1,45 +1,41 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
+import { InteractiveTravelCard } from "@/components/ui/3d-card";
 
 const sectors = [
   {
-    icon: (
-      <svg className="w-6 h-6 text-[#0059bb] dark:text-[#adc7ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009 9.35c.692 0 1.345-.233 1.874-.627A3.001 3.001 0 0013.5 9.35c.692 0 1.345-.233 1.874-.627A3.001 3.001 0 0018 9.35m-16.5 0A3.001 3.001 0 013 7.875v-.825a3 3 0 013-3h12a3 3 0 013 3v.825a3.001 3.001 0 01-1.5 2.624" />
-      </svg>
-    ),
-    badge: "Grandes & Moyennes Surfaces",
+    subtitle: "Grandes & Moyennes Surfaces",
     title: "GMS & Hypermarchés",
     description: "Référencement, livraison cadencée et respect scrupuleux des cahiers des charges des enseignes modernes de distribution.",
+    imageUrl: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=800&auto=format&fit=crop",
+    actionText: "Approvisionner GMS",
+    href: "/contact",
   },
   {
-    icon: (
-      <svg className="w-6 h-6 text-[#0059bb] dark:text-[#adc7ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.676V14.25m0 0h2.25" />
-      </svg>
-    ),
-    badge: "Réseau Traditionnel",
+    subtitle: "Réseau Traditionnel",
     title: "Grossistes & Détaillants",
-    description: "Couverture capillaire pour irriguer les grossistes, demi-grossistes et le réseau dense de proximité à travers le Maroc.",
+    description: "Couverture capillaire pour approvisionner grossistes, demi-grossistes et le réseau dense de proximité dans le Nord du Maroc.",
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop",
+    actionText: "Réseau Grossistes",
+    href: "/contact",
   },
   {
-    icon: (
-      <svg className="w-6 h-6 text-[#0059bb] dark:text-[#adc7ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.333M4.5 21V10.333" />
-      </svg>
-    ),
-    badge: "HORECA & CHR",
-    title: "Hôtels, Restaurants & Cafés",
+    subtitle: "HORECA & CHR",
+    title: "Hôtels, Restos & Cafés",
     description: "Solutions d'approvisionnement régulier, conditionnements professionnels adaptés et réactivité pour les métiers de bouche.",
+    imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
+    actionText: "Services HORECA",
+    href: "/contact",
   },
   {
-    icon: (
-      <svg className="w-6 h-6 text-[#0059bb] dark:text-[#adc7ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0" />
-      </svg>
-    ),
-    badge: "B2B & Collectivités",
-    title: "Entreprises & Institutionnels",
+    subtitle: "B2B & Collectivités",
+    title: "Entreprises & Institutions",
     description: "Approvisionnement en volume pour cantines, traiteurs institutionnels et grands comptes professionnels.",
+    imageUrl: "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=800&auto=format&fit=crop",
+    actionText: "Solutions B2B",
+    href: "/contact",
   },
 ];
 
@@ -164,13 +160,13 @@ const AboutSectionOne = () => {
           </div>
         </div>
 
-        {/* Bottom Part: Secteurs avec lesquels nous travaillons */}
+        {/* Bottom Part: Secteurs avec lesquels nous travaillons (3D Interactive Cards) */}
         <div className="pt-12 border-t border-[#141d23]/10 dark:border-white/10">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0059bb] dark:text-[#adc7ff] mb-2 block">
               Nos Marchés & Secteurs d&apos;Activité
             </span>
-            <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#141d23] dark:text-white">
+            <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-[#141d23] dark:text-white">
               Les Secteurs avec Lesquels Nous Travaillons
             </h3>
             <p className="font-sans text-sm sm:text-base text-[#414754] dark:text-white/70 mt-3">
@@ -178,27 +174,17 @@ const AboutSectionOne = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             {sectors.map((sec, i) => (
-              <div
+              <InteractiveTravelCard
                 key={i}
-                className="group relative p-6 rounded-xl border border-[#141d23]/10 dark:border-white/10 bg-[#f6faff] dark:bg-[#1a242c] hover:border-[#0059bb]/50 dark:hover:border-[#adc7ff]/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-lg bg-[#0059bb]/10 dark:bg-[#0059bb]/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    {sec.icon}
-                  </div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0059bb] dark:text-[#adc7ff] block mb-1">
-                    {sec.badge}
-                  </span>
-                  <h4 className="font-display text-lg font-bold text-[#141d23] dark:text-white uppercase mb-2.5">
-                    {sec.title}
-                  </h4>
-                  <p className="font-sans text-xs sm:text-sm text-[#414754] dark:text-white/70 leading-relaxed">
-                    {sec.description}
-                  </p>
-                </div>
-              </div>
+                title={sec.title}
+                subtitle={sec.subtitle}
+                description={sec.description}
+                imageUrl={sec.imageUrl}
+                actionText={sec.actionText}
+                href={sec.href}
+              />
             ))}
           </div>
         </div>
