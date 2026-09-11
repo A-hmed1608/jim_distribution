@@ -16,7 +16,7 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            badge="[ CANAL RETAIL ]"
+            badge="CANAL RETAIL"
             title="Grande Distribution"
             subtitle="Solutions de distribution pour les enseignes et réseaux de supermarchés."
           >
@@ -28,7 +28,7 @@ const Pricing = () => {
           </PricingBox>
 
           <PricingBox
-            badge="[ CANAL CHR ]"
+            badge="CANAL CHR"
             title="Hôtellerie & Restauration"
             subtitle="Services d'approvisionnement pour la restauration, cafés et collectivités."
           >
@@ -40,7 +40,7 @@ const Pricing = () => {
           </PricingBox>
 
           <PricingBox
-            badge="[ CANAL TRADITIONNEL ]"
+            badge="CANAL TRADITIONNEL"
             title="Grossistes & Commerces"
             subtitle="Partenariat commercial pour les grossistes et le réseau traditionnel."
           >

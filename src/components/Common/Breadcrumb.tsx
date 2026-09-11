@@ -14,9 +14,6 @@ const Breadcrumb = ({
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 md:w-8/12 lg:w-7/12">
               <div className="mb-6 max-w-[570px] md:mb-0 lg:mb-0">
-                <div className="mb-2 inline-block font-mono text-[10px] font-bold text-[#0059bb] dark:text-[#adc7ff] uppercase">
-                  [ JIM DISTRIBUTION ]
-                </div>
                 <h1 className="mb-3 font-display text-3xl font-bold uppercase tracking-tight text-[#141d23] dark:text-white sm:text-4xl">
                   {pageName}
                 </h1>

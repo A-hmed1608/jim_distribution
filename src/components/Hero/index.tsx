@@ -58,8 +58,8 @@ const Hero = () => {
             {/* Stats Strip */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border border-white/15 bg-white/5 backdrop-blur-md mx-auto max-w-[820px]">
               <div className="p-5 border-b sm:border-b-0 sm:border-r border-white/15">
-                <div className="font-mono text-[10px] text-[#adc7ff] uppercase mb-1 tracking-widest">
-                  [ RÉSEAU CLIENTS ]
+                <div className="font-sans text-[11px] font-semibold text-[#adc7ff] uppercase mb-1 tracking-wider">
+                  Réseau Clients
                 </div>
                 <div className="font-display text-xl font-bold text-white">
                   GMS &amp; Proximité
@@ -70,8 +70,8 @@ const Hero = () => {
               </div>
 
               <div className="p-5 border-b sm:border-b-0 sm:border-r border-white/15">
-                <div className="font-mono text-[10px] text-[#adc7ff] uppercase mb-1 tracking-widest">
-                  [ INFRASTRUCTURE ]
+                <div className="font-sans text-[11px] font-semibold text-[#adc7ff] uppercase mb-1 tracking-wider">
+                  Infrastructure
                 </div>
                 <div className="font-display text-xl font-bold text-white">
                   Plateforme Moderne
@@ -82,8 +82,8 @@ const Hero = () => {
               </div>
 
               <div className="p-5">
-                <div className="font-mono text-[10px] text-[#adc7ff] uppercase mb-1 tracking-widest">
-                  [ COUVERTURE ]
+                <div className="font-sans text-[11px] font-semibold text-[#adc7ff] uppercase mb-1 tracking-wider">
+                  Couverture
                 </div>
                 <div className="font-display text-xl font-bold text-white">
                   Nord du Maroc

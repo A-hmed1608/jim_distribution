@@ -15,8 +15,8 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           href={postUrl}
           className="relative block aspect-37/22 w-full overflow-hidden border-b border-[#141d23]/10 dark:border-white/10"
         >
-          <span className="absolute top-2 right-2 sm:top-4 sm:right-4 z-20 inline-flex items-center justify-center font-mono text-[9px] sm:text-[10px] font-bold text-white bg-[#0059bb] px-2 sm:px-3 py-0.5 sm:py-1 uppercase border border-[#0059bb]">
-            [ {displayTag} ]
+          <span className="absolute top-2 right-2 sm:top-4 sm:right-4 z-20 inline-flex items-center justify-center font-sans text-[9px] sm:text-[10px] font-bold text-white bg-[#0059bb] px-2 sm:px-3 py-0.5 sm:py-1 uppercase rounded-md shadow-sm">
+            {displayTag}
           </span>
           <Image src={displayImage} alt={title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
         </Link>

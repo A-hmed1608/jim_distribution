@@ -110,9 +110,9 @@ const Footer = () => {
           </div>
 
           <div className="h-px w-full bg-[#141d23]/10 dark:bg-white/10"></div>
-          <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#414754] dark:text-white/60">
+          <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-[#414754] dark:text-white/60">
             <p>© {new Date().getFullYear()} JIM DISTRIBUTION. Tous droits réservés.</p>
-            <p>[ DISTRIBUTION AGROALIMENTAIRE B2B - NORD DU MAROC ]</p>
+            <p>Distribution Agroalimentaire B2B — Nord du Maroc</p>
           </div>
         </div>
       </footer>
