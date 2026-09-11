@@ -1,7 +1,6 @@
 import CTA from "@/components/cta";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
-import LogoCloud from "@/components/logo-cloud";
 import LocalGeoFAQ from "@/components/FAQ/LocalGeoFAQ";
 import TestimonialsColumnsSection from "@/components/Testimonials/TestimonialsColumnsSection";
 import TrustedBy from "@/components/TrustedBy";
@@ -21,10 +20,7 @@ export default function Home() {
       {/* 1. Hero */}
       <Hero />
 
-      {/* 2. Logo Cloud Block */}
-      <LogoCloud />
-
-      {/* 3. Video / Présentation */}
+      {/* 2. Video / Présentation */}
       <Video />
 
       {/* 4. Call to Action (CTA 02 Block) */}
