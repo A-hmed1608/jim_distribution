@@ -1,81 +1,156 @@
-# Startup - Free Next.js Startup Website Template
+# 🏢 JIM DISTRIBUTION — Enterprise Portal & CMS
 
-Startup is a free, open-source, and premium-quality [**Next.js startup website template**](https://nextjstemplates.com/templates/startup) that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+<div align="center">
 
-If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
+[![Next.js](https://img.shields.io/badge/Next.js-16.3.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4.1.3-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Payload CMS](https://img.shields.io/badge/Payload_CMS-v3.88-000000?style=for-the-badge&logo=payloadcms)](https://payloadcms.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 
-### ✨ Key Features
+<br />
 
-- Crafted for Startup and SaaS Business
-- Next.js and Tailwind CSS
-- All Essential Business Sections and Pages
-- High-quality and Clean Design
-- Dark and Light Version
-- TypeScript Support
-and Much More ...
+**Plateforme Web & Système de Gestion de Contenu (CMS) de Nouvelle Génération pour la Distribution Agroalimentaire & FMCG dans le Nord du Maroc.**
 
-### 🙌 Detailed comparison between the Free and Pro versions of Startup
+[Fonctionnalités](#-fonctionnalités-clés) • [Architecture](#-pile-technologique) • [Installation](#-guide-de-démarrage) • [Configuration](#-configuration-environnement) • [Structure](#-structure-du-projet) • [Déploiement](#-déploiement)
 
-| Feature             | Free | Pro |
-|---------------------|------------|----------|
-| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
-| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
-| Homepage Variations             | 1      | 2 |
-| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes |
-| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
-| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
-| Email Support       | ❌ No         | ✅ Yes       |
-| Community Support         | ✅ Yes         | ✅ Yes       |
+</div>
 
-### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+---
 
-[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
+## 📌 Présentation
 
-Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+**JIM DISTRIBUTION** est une vitrine institutionnelle moderne et dynamique doublée d'un système de gestion de contenu d'entreprise (Headless CMS intégré via Payload CMS). Conçue sur mesure pour les leaders de la distribution agroalimentaire, la chaîne du froid, le stockage logistique et la représentation de marques FMCG dans la région Tanger-Tétouan-Al Hoceïma.
 
-- [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+---
 
-- [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+## ✨ Fonctionnalités Clés
 
-- [📦 Download](https://nextjstemplates.com/templates/startup)
+- ⚡ **Performance & Rendu Hybride** : Rendu ultra-rapide via **Next.js 16 (App Router)** et Server Components React 19.
+- 🛠️ **Payload CMS 3.x Intégré** : Gestion de contenu sans friction (Articles, Produits, Catalogues, Médias) avec éditeur Lexical RichText et adaptateur PostgreSQL natif.
+- 🎨 **UI/UX Moderne & Fluide** : Composants interactifs basés sur **Tailwind CSS v4**, **Radix UI**, **Motion** et **GSAP** (Carrousels Embla, Cartes 3D, Effets de particules, Modales animées).
+- 🌓 **Support Thème Sombre / Clair** : Basculement instantané via `next-themes` sans effet de scintillement (Zero-FOUC).
+- 📍 **Couverture Logistique Interactive** : Mise en valeur du réseau de distribution et des zones de couverture régionales (Tanger, Tétouan, Martil, Al Hoceïma, Larache).
+- 🔍 **SEO & Données Structurées Avancées** : Intégration JSON-LD Schema.org (`LocalBusiness`, `Organization`), métadonnées dynamiques OpenGraph, `sitemap.ts` et `robots.ts` automatisés.
+- 📱 **Conception 100% Responsive** : Expérience fluide et optimisée pour mobile, tablette et écrans haute résolution.
 
-- [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+---
 
-- [🔌 Documentation](https://nextjstemplates.com/docs)
+## 🛠️ Pile Technologique
 
-### ⚡ Deploy Now
+| Domaine | Technologies |
+| :--- | :--- |
+| **Core Framework** | [Next.js 16](https://nextjs.org/) (App Router), [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/) |
+| **Headless CMS** | [Payload CMS v3](https://payloadcms.com/) avec Lexical RichText |
+| **Base de Données** | [PostgreSQL](https://www.postgresql.org/) (Compatible Neon DB / Supabase / Self-hosted) |
+| **Styling & Design** | [Tailwind CSS v4](https://tailwindcss.com/), DaisyUI 5, Radix UI Primitives, Lucide Icons |
+| **Animations & Motion** | Motion (Framer Motion), GSAP 3 |
+| **Images & Optimisation** | Sharp, Next.js Image Optimization |
+| **Qualité & Formatage** | ESLint 9, Prettier avec Plugin Tailwind CSS |
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+---
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
+## 📁 Structure du Projet
 
-### 📄 License
+```text
+startup-nextjs/
+├── src/
+│   ├── app/
+│   │   ├── (app)/              # Application Web principale (Frontend Next.js)
+│   │   │   ├── layout.tsx      # Layout racine, Polices & Fournisseurs de thèmes
+│   │   │   ├── page.tsx        # Page d'accueil interactive
+│   │   │   ├── providers.tsx   # Fournisseurs de contexte (Theme, State)
+│   │   │   └── ...             # Pages (About, Services, Contact, Blog...)
+│   │   ├── (payload)/          # Routes et Interface Admin de Payload CMS
+│   │   ├── robots.ts           # Générateur dynamique de robots.txt
+│   │   └── sitemap.ts          # Générateur dynamique de sitemap.xml
+│   ├── collections/            # Schémas des collections Payload CMS (Users, Media, Pages...)
+│   ├── components/             # Composants modulaires de l'interface
+│   │   ├── Header/             # Navigation principale & Sélecteur de thème
+│   │   ├── Footer/             # Pied de page & Coordonnées légales
+│   │   ├── Hero/               # Section Hero avec animations
+│   │   ├── Services/           # Vitrine des services logistiques
+│   │   ├── SEO/                # Composants JSON-LD Structured Data
+│   │   └── ui/                 # Composants d'interface atomiques (Boutons, Cartes 3D, Accordéons...)
+│   ├── lib/                    # Utilitaires, Helpers & Initialisation Payload
+│   ├── styles/                 # Feuilles de styles globales (index.css)
+│   └── types/                  # Définitions TypeScript globales
+├── public/                     # Assets statiques, Images, Logos & Favicons
+├── payload.config.ts           # Configuration centrale de Payload CMS
+├── next.config.js              # Configuration Next.js
+└── package.json                # Dépendances et Scripts npm
+```
 
-Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
+---
 
-### 💜 Support
+## 🚀 Guide de Démarrage
 
-If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
+### Prérequis
 
-### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
+- **Node.js** : Version `20.x` ou supérieure recommandée
+- **Gestionnaire de paquets** : `npm`, `pnpm` ou `yarn`
+- **Instance PostgreSQL** : Locale ou Cloud (ex: Neon, Supabase, Railway)
 
-### Update Log
+### 1. Installation des dépendances
 
-**03 December 2025**
+```bash
+npm install
+```
 
-- Upgrade to Next.js 16
-- Fixed video modal issue
+### 2. Configuration de l'environnement
 
-**10 April 2025**
+Créez un fichier `.env.local` à la racine :
 
-- Fix peer deps issue with Next.js 15
-- Upgrade to tailwind v4
-- Refactored blog cards for handling edge cases(text ellipsis on bio, keeping author details at the bottom etc.)
-- Re-wrote blog details page with icons separation, fallback author image and better markup.
-- Fixed duplicate key errors on homepage.
-- Separated icons on theme-switcher button, and refactored scroll-to-top button.
+```bash
+cp .env.local.example .env.local
+```
 
-**29 Jan 2025**
+Renseignez vos variables d'environnement :
 
-- Upgraded to Next.js 15
+```env
+# URL du site
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+# Connexion PostgreSQL (Payload CMS)
+DATABASE_URI=postgresql://postgres:password@localhost:5432/jim_distribution
+
+# Clé secrète Payload CMS
+PAYLOAD_SECRET=your-super-strong-secret-key-here
+```
+
+### 3. Lancer en mode Développement
+
+```bash
+npm run dev
+```
+
+- 🌐 **Site Web** : Accédez à [`http://localhost:3000`](http://localhost:3000)
+- ⚙️ **Panneau d'Administration CMS** : Accédez à [`http://localhost:3000/admin`](http://localhost:3000/admin)
+
+---
+
+## 📜 Scripts Disponibles
+
+| Commande | Description |
+| :--- | :--- |
+| `npm run dev` | Démarre le serveur de développement Next.js |
+| `npm run build` | Compile l'application pour la production |
+| `npm run start` | Lance le serveur de production compilé |
+| `npm run lint` | Exécute l'analyse statique du code avec ESLint |
+
+---
+
+## 🚢 Déploiement
+
+### Déploiement sur Vercel (Recommandé)
+
+1. Importez le dépôt GitHub sur [Vercel](https://vercel.com/).
+2. Configurez les variables d'environnement (`DATABASE_URI`, `PAYLOAD_SECRET`, `NEXT_PUBLIC_SITE_URL`).
+3. Déployez en un clic.
+
+---
+
+## 📄 Licence
+
+Ce projet est la propriété exclusive de **JIM DISTRIBUTION**. Tous droits réservés.
